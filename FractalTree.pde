@@ -21,12 +21,12 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 	int endY1 = (int)(branchLength*Math.sin(angle1)+y);
 	int endX2 = (int)(branchLength*Math.cos(angle2)+x);  
 	int endY2 = (int)(branchLength*Math.sin(angle2)+y);
-	if(branchLength<=100)
+	if(branchLength<=500)
 	{
 		line(x,y,endX1,endY1);
 		line(x,y,endX2,endY2);
 	}
-	if(branchLength>100)
+	if(branchLength>10)
 	{
 		drawBranches(endX1,endY1,branchLength/2,angle1);
 		drawBranches(endX2,endY2,branchLength/2,angle2);
